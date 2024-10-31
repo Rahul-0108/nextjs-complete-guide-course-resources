@@ -1,3 +1,4 @@
+// will catch all paths archive/*
 import Link from 'next/link';
 
 import NewsList from '@/components/news-list';
