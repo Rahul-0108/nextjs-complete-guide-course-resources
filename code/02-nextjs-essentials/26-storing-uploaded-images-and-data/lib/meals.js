@@ -33,7 +33,7 @@ export async function saveMeal(meal) {
     }
   });
 
-  meal.image = `/images/${fileName}`;
+  meal.image = `/images/${fileName}`; // we stored images inside public folder , but on reading no need to mention public
 
   db.prepare(`
     INSERT INTO meals
