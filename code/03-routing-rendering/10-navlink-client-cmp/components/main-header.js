@@ -1,3 +1,4 @@
+// we needed to use hook, so instead of making this component client component we created a new client omponent NavLink
 import Link from 'next/link';
 import NavLink from './nav-link';
 
