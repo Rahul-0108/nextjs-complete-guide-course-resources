@@ -1,3 +1,4 @@
+// will always render this page for route : archive/*
 import NewsList from '@/components/news-list';
 import { getLatestNews } from '@/lib/news';
 
