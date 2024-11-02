@@ -39,7 +39,7 @@ function Post({ post, action }) {
 }
 
 export default function Posts({ posts }) {
-  const [optimisticPosts, updateOptimisticPosts] = useOptimistic(posts, (prevPosts, updatedPostId) => {
+  const [optimisticPosts, updateOptimisticPosts] = useOptimistic(posts, (prevPosts, updatedPostId) => { // function to update the state
     const updatedPostIndex = prevPosts.findIndex(post => post.id === updatedPostId);
 
     if (updatedPostIndex === -1) {
@@ -59,8 +59,8 @@ export default function Posts({ posts }) {
   }
 
   async function updatePost(postId) {
-    updateOptimisticPosts(postId);
-    await togglePostLikeStatus(postId);
+    updateOptimisticPosts(postId); // update the state before newtwerk call is made to show updated ui
+    await togglePostLikeStatus(postId); // call server action
   }
 
   return (
